@@ -1,9 +1,14 @@
-package user;
+package chat;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
 
 import javax.swing.*;
+
+import chat.chat_client;
+import chat.chat_server;
+
 import java.awt.*;
 import java.util.*;
 
@@ -65,7 +70,13 @@ public class SignIn extends JFrame implements Serializable{
                         if (checkLogin())
                             {   
                                 frame.dispose();
-                                JOptionPane.showMessageDialog(null, "you did this to yourself now suffer");
+                                
+                                chat_server s = new chat_server();
+                                s.setVisible(true);
+                                
+                                chat_client c = new chat_client();
+                                c.setVisible(true);
+                                
                                 //afterSellerSignIn a = new afterSellerSignIn();
                             }
                         else

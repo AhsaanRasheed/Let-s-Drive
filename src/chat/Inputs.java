@@ -1,4 +1,6 @@
-package user;
+package chat;
+
+
 
 import java.io.Serializable;
 public class Inputs implements Serializable{
